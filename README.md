@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
+<img src="https://i.imgur.com/kcq30PT.png" alt="Traffic Examination"/>
 </p>
 
 <h1>Network File Shares and Permissions-Sharing and Accessing Folders over a Network Azure Virtual Machines</h1>
