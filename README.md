@@ -105,7 +105,10 @@ I repeat the process to create additional groups such as ReadOnlyUsers, WriteUse
 <img src="https://imgur.com/T2n1u4F.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+6. Security Group Creation:
+
+Created a new security group named "Accountants" in Active Directory Users and Computers.
+Assigned "Accountants" read and write permissions to the "Accounting" folder.
 </p>
 <br />
 
@@ -129,7 +132,9 @@ I repeat the process for other folders and assign the groups I created with the 
 <img src="https://imgur.com/nZlFgTG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-8. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+8. Testing Access from Client1:
+Logged into Client1 as a generic user to confirm that access to the "Accounting" folder was initially denied.
+Added the user to the "Accountants" security group and attempted to access the folder again.
 </p>
 <br />
 
@@ -137,7 +142,8 @@ I repeat the process for other folders and assign the groups I created with the 
 <img src="https://imgur.com/HtAYOpo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-9. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+9. Add User to Group:
+Added the generic user (bodap) to the "Accountants" group in Active Directory Users and Computers.
 </p>
 <br />
 
