@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
-<h1>Sharing and Accessing Folders over a Network Azure Virtual Machines</h1>
+<h1>Network File Shares and Permissions-Sharing and Accessing Folders over a Network Azure Virtual Machines</h1>
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
 
