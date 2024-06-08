@@ -36,7 +36,10 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://imgur.com/o3GMvPW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+1.Log into Domain Controller (DC1):
+First, I open the Azure portal and navigate to Virtual Machines.
+I connect to my Domain Controller VM (DC1) using Remote Desktop.
+I log in with the administrator credentials (e.g., Jane_admin).
 </p>
 <br />
 
@@ -44,7 +47,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://imgur.com/lDzr897.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+2. Create Folders:
+On DC1, I open File Explorer and navigate to the C: drive.
+I create four folders named: ReadAccess, WriteAccess, NoAccess, and Accounting.
 </p>
 <br />
 
@@ -52,7 +57,19 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://imgur.com/ttPdXwx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+3. Share the Folders:
+
+I right-click on ReadAccess, go to Properties, then the Sharing tab, and click Advanced Sharing.
+
+I check Share this folder, and set the share name to ReadAccess.
+
+I click on Permissions, add Domain Users, and set their permission to Read. Then I click OK.
+
+I repeat the above steps for the WriteAccess folder, but set the permissions to Full Control for Domain Users.
+
+For NoAccess, I only add Domain Admins with Full Control.
+
+For Accounting, I add specific users or groups with the desired access levels as per my organization's requirements.
 </p>
 <br />
 
@@ -60,7 +77,11 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://imgur.com/8ggBknu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+4.I open File Explorer on Client1.
+In the address bar, I type \\DC1\ReadAccess and press Enter. I should have read-only access to this folder.
+I try accessing \\DC1\WriteAccess and verify that I can create and delete files.
+I access \\DC1\NoAccess to confirm that I do not have permission to view this folder (unless I am logged in as an admin).
+I access \\DC1\Accounting and test the permissions as configured.
 </p>
 <br />
 
@@ -68,7 +89,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://imgur.com/1duxuLF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+5. On DC1, I open the Active Directory Users and Computers tool.
+
+I navigate to my domain, right-click on Users, and select New > Group.
+
+I name the group AccountingUsers and set the group scope to Global and group type to Security. Then I click OK.
+
+I repeat the process to create additional groups such as ReadOnlyUsers, WriteUsers, etc.
+
+
 </p>
 <br />
 
@@ -84,7 +113,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://imgur.com/zBA28u9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-7. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+7. I go back to the folder properties for each shared folder on DC1.
+
+For Accounting, I go to the Security tab, click Edit, and then Add.
+
+I enter the name of the group AccountingUsers and set the appropriate permissions (e.g., Read and Write).
+
+I click OK.
+
+I repeat the process for other folders and assign the groups I created with the respective permissions.
 </p>
 <br />
 
