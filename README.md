@@ -3,7 +3,13 @@
 </p>
 
 <h1>Network File Shares and Permissions-Sharing and Accessing Folders over a Network Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+In this tutorial,These steps provide a comprehensive guide to setting up and verifying folder permissions in a Windows domain environment.
+
+
+
+
+
+<br />
 
 
 
