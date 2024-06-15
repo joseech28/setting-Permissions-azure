@@ -33,7 +33,7 @@ In this tutorial,These steps provide a comprehensive guide to setting up and ver
 <img src="https://imgur.com/o3GMvPW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-1.Log into Domain Controller (DC1):
+1. Log into Domain Controller (DC1):
 First, I open the Azure portal and navigate to Virtual Machines.
 I connect to my Domain Controller VM (DC1) using Remote Desktop.
 I log in with the administrator credentials (e.g., Jane_admin).
@@ -69,7 +69,7 @@ For Accounting, I add specific users or groups with the desired access levels as
 <img src="https://imgur.com/8ggBknu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-4.I open File Explorer on Client1.
+4. I open File Explorer on Client1.
 In the address bar, I type \\DC1\ReadAccess and press Enter. I should have read-only access to this folder.
 I try accessing \\DC1\WriteAccess and verify that I can create and delete files.
 I access \\DC1\NoAccess to confirm that I do not have permission to view this folder (unless I am logged in as an admin).
