@@ -20,7 +20,7 @@ In this tutorial,These steps provide a comprehensive guide to setting up and ver
 - Remote Desktop
 - Various Command-Line Tools
 - domain controller (DC one) running Active Directory
-- Linux
+
   
 
 
